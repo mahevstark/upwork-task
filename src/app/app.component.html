@@ -1,0 +1,94 @@
+<!-- main sections starts here -->
+<section [class.light]="!darkTheme" [class.dark]="darkTheme">
+  <div class="container">
+    <!-- auth section starts here -->
+    <div class="auth-section">
+      <!-- logo -->
+      <div class="logo-container">
+        <img src="./../assets/images/logos/min_logo.svg" />
+      </div>
+
+      <!-- heading -->
+      <div class="heading-container">
+        <h3>Sign In</h3>
+      </div>
+
+      <!-- form container -->
+      <div class="form-container">
+        <!-- form -->
+        <form>
+          <!-- email -->
+          <div class="input-container">
+            <input
+              type="email"
+              class="form-input"
+              placeholder="Email or Phone *"
+            />
+          </div>
+
+          <!-- password -->
+          <div class="input-container">
+            <input
+              type="password"
+              class="form-input"
+              placeholder="Password *"
+            />
+          </div>
+
+          <!-- buttons, signin and forgot password -->
+          <div class="buttons-container">
+            <a class="other-link" href="">Forgot Password?</a>
+            <button class="sign-in-button">Sign In</button>
+          </div>
+        </form>
+        <!-- forms ends here -->
+
+        <!-- create account link -->
+        <div class="other-links">
+          <a class="other-link m-t-40" href="">Create an account</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- footer section starts here -->
+    <div class="footer">
+      <!-- theme and language section -->
+      <div class="preferences">
+        <!-- theme section -->
+        <button (click)="toggleDarkMode()" type="button" class="theme-selector">
+          <i
+            class="icon"
+            [class.icon-brightness-white]="darkTheme"
+            [class.icon-brightness]="!darkTheme"
+          ></i>
+        </button>
+
+        <!-- language section -->
+        <div class="language-selector">
+          <mat-form-field>
+            <mat-select [(value)]="selected">
+              <mat-select-trigger>
+                <span class="selected-language">
+                  {{selected}}
+                </span>
+              </mat-select-trigger>
+              <mat-option value="Select Language">Select Language</mat-option>
+              <mat-option value="French">French</mat-option>
+              <mat-option value="Dutch">Dutch</mat-option>
+              <mat-option value="English">English</mat-option>
+            </mat-select>
+          </mat-form-field>
+        </div>
+      </div>
+
+      <!-- privacy terms links section -->
+      <div class="footer-links">
+        <a href="">Help</a>
+        <a href="">Privacy</a>
+        <a href="">Terms</a>
+      </div>
+    </div>
+    <!-- footer section ends here -->
+  </div>
+</section>
+<!-- main section ends here -->

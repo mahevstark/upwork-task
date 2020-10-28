@@ -1,0 +1,255 @@
+/* outer containter */
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* light theme background color of body and auth section */
+.light,
+.light .auth-section {
+  background-color: #fff;
+}
+
+/* dark theme background color of body and auth section */
+.dark,
+.dark .auth-section {
+  background-color: #000;
+}
+
+/* auth section styling */
+.auth-section {
+  margin-top: 10%;
+  border-radius: 12px;
+  width: calc(100% - 70%);
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+/* changing box shadow color in light theme */
+.light .auth-section {
+  box-shadow: 0 0 20px 5px #0000001a;
+}
+
+/* changing box shadow color in dark theme */
+.dark .auth-section {
+  box-shadow: 0 0 20px 5px #ffffff1a;
+}
+
+/* footer section styling */
+.footer {
+  width: calc(100% - 70%);
+  margin-top: 10px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* footer links, privacy and terms pages */
+.other-links {
+  display: flex;
+}
+
+/* our logo */
+.logo-container img {
+  width: 100px;
+  float: left;
+}
+
+/* our heading */
+.heading-container h3 {
+  float: left;
+  margin: 30px 0px 20px 0px;
+  font-size: 22px;
+}
+
+/* text input container style */
+.input-container {
+  margin-bottom: 10px;
+}
+
+/* text input style */
+.form-input {
+  width: 100%;
+  border-radius: 12px;
+  border: 2px solid #e6e6e6;
+  background-color: transparent;
+  padding: 15px;
+  font-weight: bold;
+}
+
+/* light theme text input color */
+.light .form-input {
+  color: #000;
+}
+
+/* dark theme text input color */
+.dark .form-input {
+  color: #fff;
+}
+
+/* text input placeholder custom color */
+.form-input::placeholder {
+  color: #a0a0a0;
+}
+
+/* removing blue line on focus of text input */
+.form-input:focus {
+  outline: 0;
+}
+
+/* forgot and sign in button section */
+.buttons-container {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+/* forgot link and create account link styling */
+.other-link {
+  text-decoration: none;
+  color: #0d3680;
+  float: left;
+  font-size: 13px;
+}
+
+/* sign in button styling */
+.buttons-container .sign-in-button {
+  background-color: #1578d5;
+  border-radius: 12px;
+  color: #fff;
+  border: 0;
+  padding: 10px 30px;
+}
+
+/* custom margin */
+.m-t-40 {
+  margin-top: 40px;
+}
+
+/* our brightness icon to select teme */
+.theme-selector {
+  background: transparent;
+  padding: 2px 15px;
+  border: 0;
+  cursor: pointer;
+}
+.theme-selector:focus {
+  outline: 0;
+}
+.theme-selector i {
+  color: #1578d5;
+}
+.icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-size: cover;
+}
+.icon-brightness {
+  background-image: url("./../assets/images/logos/brightness.svg");
+}
+.icon-brightness-white {
+  background-image: url("./../assets/images/logos/brightness-white.svg");
+}
+
+/* language selector section */
+.preferences {
+  display: flex;
+  align-items: center;
+}
+.preferences .language-selector {
+  margin-left: 10px;
+}
+
+/* terms and privacy section */
+.footer-links {
+  display: flex;
+  flex-direction: row;
+}
+.footer-links a {
+  text-decoration: none;
+  margin-left: 15px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
+/* light theme style of terms and privacy links */
+.light .footer-links a {
+  color: #3a3c3c;
+}
+
+/* dark theme style of terms and privacy links */
+.dark .footer-links a {
+  color: #fff;
+}
+
+/* selected language styling */
+.selected-language {
+  font-size: 12px;
+  font-weight: bold;
+  padding-bottom: 3px;
+  border-bottom: 2px solid #333;
+}
+::ng-deep .mat-form-field-underline {
+  display: none;
+}
+::ng-deep .mat-select-value {
+  overflow: initial !important;
+}
+::ng-deep .mat-form-field-infix {
+  width: 120px !important;
+}
+
+/* responsive style */
+@media (max-width: 1200px) {
+  .auth-section,
+  .footer {
+    width: calc(100% - 60%);
+  }
+}
+@media (max-width: 1000px) {
+  .auth-section,
+  .footer {
+    width: calc(100% - 50%);
+  }
+}
+@media (max-width: 800px) {
+  .auth-section,
+  .footer {
+    width: calc(100% - 30%);
+  }
+}
+@media (max-width: 600px) {
+  .auth-section,
+  .footer {
+    width: calc(100% - 20%);
+  }
+}
+@media (max-width: 400px) {
+  .auth-section,
+  .footer {
+    width: calc(100% - 8%);
+  }
+}
+@media (max-width: 415px) {
+  .footer {
+    justify-content: center;
+  }
+}
+@media (max-width: 312px) {
+  .buttons-container,
+  .other-links {
+    justify-content: center;
+  }
+  .buttons-container .sign-in-button {
+    margin-top: 10px;
+  }
+}
